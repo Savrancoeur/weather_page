@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <!-- jquery link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- tailwind link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div
+      class="min-w-500px min-h-400px mx-auto bg-gradient-to-br from-blue-500 to-blue-700 text-white p-6 rounded-2xl shadow-lg"
+    >
+      <!-- City Selection -->
+      <div class="mb-4">
+        <label for="city-select" class="block text-lg font-medium mb-2"
+          >Select City</label
+        >
+        <select
+          id="city-select"
+          class="w-full p-2 rounded-lg bg-white text-gray-700"
+        >
+          <option value="London">London</option>
+          <option value="Paris">Paris</option>
+          <option value="Madrid">Madrid</option>
+          <option value="Berlin">Berlin</option>
+          <option value="Rome">Rome</option>
+        </select>
+      </div>
+
+      <!-- Language Selection -->
+      <div class="mb-4">
+        <label for="language-select" class="block text-lg font-medium mb-2"
+          >Select Language</label
+        >
+        <select
+          id="language-select"
+          class="w-full p-2 rounded-lg bg-white text-gray-700"
+        >
+          <option value="en">English</option>
+          <option value="fr">French</option>
+          <option value="es">Spanish</option>
+          <option value="de">German</option>
+          <option value="it">Italian</option>
+        </select>
+      </div>
+
+      <!-- Weather Box -->
+      <div
+        class="max-w-sm mx-auto bg-gradient-to-br from-blue-500 to-blue-700 text-white p-6 rounded-2xl shadow-lg"
+      >
+        <div class="flex justify-between items-center">
+          <div>
+            <h2 class="text-xl font-semibold" id="city-name">London</h2>
+            <p id="weather-time"></p>
+          </div>
+          <div>
+            <img
+              id="weather-icon"
+              src=""
+              alt="Weather Icon"
+              class="w-12 h-12"
+            />
+          </div>
+        </div>
+
+        <div class="my-4">
+          <p class="text-5xl font-bold" id="temperature">--°C</p>
+          <p class="text-lg" id="weather-description">--</p>
+        </div>
+
+        <div class="flex justify-between items-center mt-4 space-x-4">
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-wind"></i>
+            <p id="wind-speed">-- km/h</p>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-tint"></i>
+            <p id="humidity-level">--%</p>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-sun"></i>
+            <p id="sunshine-hours">-- h</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
